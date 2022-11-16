@@ -45,7 +45,7 @@ Como podemos ver dependiendo de los colores con los que tracemos el bosquejo, Ga
 
 ### Imagen 1
 
-imagen
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen1.jpeg?raw=true)
 
 En el caso de Dall -E , es un programa de inteligencia artificial que crea imágenes a partir de descripciones textuales, reveladas por OpenAI el 5 de enero de 2021
 Para hacer uso de Dall – E lo primer es ingresar una descripción de lo que se esperaría generar. (Imagen 2)
@@ -53,6 +53,7 @@ Para hacer uso de Dall – E lo primer es ingresar una descripción de lo que se
 ### Imagen 2
 
 imagen 2
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen2.jpeg?raw=true)
 
 Además de generar escenarios, existen más alternativas para generar personajes o assets de videojuegos en diferentes estilos. Como por ejemplo Pixel Art, para juegos que sean del estilo pixel art.
 Pasos: Seleccionar una imagen para generar el pixel art.
@@ -60,7 +61,10 @@ Pasos: Seleccionar una imagen para generar el pixel art.
 ### Imagen 3
 
 imagen 3
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen3.jpeg?raw=true)
+
 imagen 4
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen4.jpeg?raw=true)
 
 ## DISCUCIÓN
 
@@ -68,17 +72,22 @@ En Una GAN es una arquitectura que reúne dos redes de neuronas antagónicas. A 
 
 Las GAN podrían usarse, por ejemplo, para generar niveles del juego DOOM (1993). Para ello, los investigadores se apoyaron en más de mil niveles del juego creado por la comunidad. Para cada nivel, extrajeron varias imágenes que describían la distribución de paredes, techos, objetos, enemigos, etc. Para cada uno de los niveles, extrajeron varias imágenes que describían la distribución de paredes, techos, objetos, enemigos, etc. Cada nivel es así completamente descrito por 6 imágenes vistas desde arriba. Los GAN se entrenan con estas imágenes y al final del entrenamiento pueden generar nuevas imágenes que luego se transforman en niveles.
 Probablemente las GAN han llamado la atención del gran público por primera vez con el algoritmo pix2pix que permite transformar una imagen. Por ejemplo, se puede pasar de una imagen en blanco y negro a su versión en color, de una imagen abocetada a su versión realista, o de una imagen de día a la misma imagen de noche
+
 imagen 5
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen5.png?raw=true)
+
 Para poder aprender esta red, ya debe tener un conjunto de datos de pares de imágenes (por ejemplo, un par corresponde a un boceto dibujado y la imagen correspondiente completa).
 Durante el aprendizaje, el generador toma un boceto como entrada y genera una imagen completa. El discriminador observa el par de imágenes resultante (el boceto y la imagen generada) e intenta determinar si el par proviene del conjunto de datos original o si la imagen fue generada. Las dos redes mejoran a medida que se aprenden y al final obtenemos un generador capaz de transformar cualquier boceto en una imagen. Una de las versiones de este algoritmo que tiene mucho más es Edges2cat que ha sido entrenado en pares de imágenes de gatos.
 Al ingresar un boceto bastante detallado, obtenemos un resultado fotorrealista. Cuando uno es menos talentoso y da un boceto como el de abajo, los resultados son menos convincentes, pero aun así se corresponden bien con lo que se solicita de la red.
 Sorprendentemente, incluso cuando proporciona bocetos que no representan gatos en absoluto, la red se las arregla para salir adelante e intenta generar un gato con la forma solicitada.
 
 imagen 6
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen6.jpg?raw=true)
 
 Por supuesto, este enfoque se ha utilizado para la generación de campos procedimentales. Como hemos visto anteriormente, la generación de campos de procedimiento a menudo pasa por el ruido de Perlin o sus variantes (como el súper ruido para No man's sky) con resultados bastante desiguales, ya que a menudo se requiere una gran cantidad de ajustes manuales.
 
 imagen 7
+![](https://github.com/angeldev96/nextjs-blog/blob/master/public/static/images/imagen7.png?raw=true)
 
 Con un método muy cercano a pix2pix, es posible aprender una red capaz de pasar de un boceto muy simple de un terreno a un terreno modelado en 3 dimensiones. Entonces es suficiente trabajar en el boceto para modificar el resultado en 3D, lo que ahorra mucho tiempo.
 
