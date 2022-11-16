@@ -2,7 +2,7 @@
 title: 'Investigacion SOII'
 date: 2022-11-16T15:32:14Z
 lastmod: '2021-02-01'
-tags: ['next-js', 'tailwind', 'guide']
+tags: ['SOII', 'investigacion', 'IA']
 draft: false
 summary: 'An overview of the new features released in v1 - code block copy, multiple authors, frontmatter layout and more'
 layout: PostSimple
@@ -10,44 +10,91 @@ bibliography: references-data.bib
 canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/new-features-in-v1/
 ---
 
-## Inteligencia Ariticial
+# Modelos Generativos de imágenes con Inteligencia Artificial para la creación de escenarios y personajes en videojuegos.
 
-La película trata de una patrulla de cuatro hombres del ejército de fuerza especiales de los estados unidos con
-la misión de infiltrarse a un pueblo de afganistán donde el pueblo está rodeado por montañas,donde tendrán que
-infiltrarse con mucho cuidado buscando cobertura y encubrimiento para no ser detectados por el enemigo, son enviados
-por aire haciendo descenso de helicópteros para poder llegar hasta ese lugar, la patrulla está equipada con armas ,
-radios y teléfonos satelitales para poder establecer coneccion y brindar información y recibir apoyo en caso de ser
-necesaria. logran poder establecer visibilidad directamente con ese pueblo donde se encuentra una fuerza armada de
-los talibanes. ya ubicados el equipo decide tomar un descanso para recuperar energías y esperar el momento preciso
-para poder infiltrarse, el equipo es descubierto por una inesperada situación de tres personas del pueblo afgano
-que se dirigen con un rebaño de animales, los soldados se ven forzados a tomar una difícil decisión de qué hacer
-con ellos, si dejarlos atados, dejarlos ir o quitarles la vida, ellos se encuentran en una fuerte discusión
-sabiendo que la decisión que deben tomar debe ser la más correcta por que con una mala decisión puede ser fatal
-para su equipo. el jefe del equipo decide dejarlos ir, sabiendo que ya fueron descubiertos y en cualquier momento
-serán atacados por el enemigo, el equipo decide salir de ese lugar y tratar de establecer comunicación con la base
-de comunicaciones de los estados unidos para ponerlos al tanto de la situación en la que se encontraban, pero
-lastimosamente en el terreno donde estaban no hay señal para radio, deciden comunicarse por teléfono satelital y
-poner al tanto de lo que estaba sucediendo, la comunicación establecida es de muy baja calidad por el terreno
-donde se encuentran y no pudieron brindar la suficiente información de lo que estaba sucediendo.
+## Objetivo
 
-```bash
-git remote add template git@github.com:timlrx/tailwind-nextjs-starter-blog.git
-git pull template v1 --allow-unrelated-histories
-rm -rf node_modules
-```
+En este artículo abarcaremos los diferentes puntos importantes para la creación de videojuegos con inteligencia artificial, proporcionando también imágenes representativas de los casos en los que está presente el uso de está tecnología. que nos puede ayudar en el desarrollo de los videojuegos, en la parte grafica artística.
 
-You can see an example of such a migration in this [commit](https://github.com/timlrx/timlrx.com/commit/bba1c185384fd6d5cdaac15abf802fdcff027286) for my personal blog.
+## Marco Teórico
 
-v1 also uses `feed.xml` rather than `index.xml`, to avoid some build issues with Vercel. If you are migrating you should add a redirect to `next.config.js` like so:
+Cuando se habla sobre inteligencia artificial no referimos a máquinas inteligentes o machine learning, con el fin de que sean las propias máquinas las que realicen dicha tarea. Aquí se pretende entrenar a una Inteligencia Artificial para que sea capaz de replicar alguna tarea típicamente humana o para que sea capaz de hacer tareas que escapan a nuestras capacidades.
 
-```js
-async redirects() {
-  return [
-    {
-      source: '/:path/index.xml',
-      destination: '/:path/feed.xml',
-      permanent: true,
-    }
-  ]
-}
-```
+### Metodología
+
+Escribir las acciones, por ejemplo, un texto de entrada el cual es procesado por la IA y esta regresa una imagen de salida, o hacer un bosquejo de un dibujo y de igual forma la IA lo procesa y genera una imagen del bosquejo que se ha realizado.
+
+## HERRAMIENTEAS
+
+- GAN (GauGAN2)
+- DALL – E
+- Pixel Art
+
+## DESARROLLO
+
+El modelo de IA detrás de GauGAN2 se entrenó en 10 millones de imágenes de paisajes de alta calidad utilizando la supercomputadora NVIDIA Selene , un sistema NVIDIA DGX SuperPOD que se encuentra entre las 10 supercomputadoras más poderosas del mundo. Los investigadores utilizaron una red neuronal que aprende la conexión entre las palabras y las imágenes a las que corresponden, como "invierno", "niebla" o "arco iris".
+Podemos hacer un bosquejo en este caso usando GauGAN2.
+Algo importante a destacar es que según el color del pincel a utilizar se puede elegir el tipo de terrenos a crear, por ejemplo.
+
+- Verde - Oscuro: Se usa para generar las montañas.
+- Morado: Se utiliza para generar ríos.
+- Gris: Se usa para generar la nieve.
+- Verde – Claro: se usa para generar los árboles
+
+Como podemos ver dependiendo de los colores con los que tracemos el bosquejo, GauGAN2 lo que hará será generar una imagen fotorrealista. (observar imagen 1)
+
+### Imagen 1
+
+imagen
+
+En el caso de Dall -E , es un programa de inteligencia artificial que crea imágenes a partir de descripciones textuales, reveladas por OpenAI el 5 de enero de 2021
+Para hacer uso de Dall – E lo primer es ingresar una descripción de lo que se esperaría generar. (Imagen 2)
+
+### Imagen 2
+
+imagen 2
+
+Además de generar escenarios, existen más alternativas para generar personajes o assets de videojuegos en diferentes estilos. Como por ejemplo Pixel Art, para juegos que sean del estilo pixel art.
+Pasos: Seleccionar una imagen para generar el pixel art.
+
+### Imagen 3
+
+imagen 3
+imagen 4
+
+## DISCUCIÓN
+
+En Una GAN es una arquitectura que reúne dos redes de neuronas antagónicas. A la entrada de estas redes, se proporciona un conjunto de datos de contenido (a menudo imágenes). Una de las dos redes tiene la tarea de generar un contenido similar al del conjunto de datos de entrada y la otra red debe ser capaz de distinguir los datos reales de los generados por la primera red. Ambas redes aprenden simultáneamente y compiten entre sí durante el proceso de aprendizaje, lo que finalmente permite que cada red mejore en sus respectivas tareas. Al final del proceso de aprendizaje solo se mantiene la red generativa, que en teoría es capaz de generar nuevos contenidos muy similares al contenido inicial.
+
+Las GAN podrían usarse, por ejemplo, para generar niveles del juego DOOM (1993). Para ello, los investigadores se apoyaron en más de mil niveles del juego creado por la comunidad. Para cada nivel, extrajeron varias imágenes que describían la distribución de paredes, techos, objetos, enemigos, etc. Para cada uno de los niveles, extrajeron varias imágenes que describían la distribución de paredes, techos, objetos, enemigos, etc. Cada nivel es así completamente descrito por 6 imágenes vistas desde arriba. Los GAN se entrenan con estas imágenes y al final del entrenamiento pueden generar nuevas imágenes que luego se transforman en niveles.
+Probablemente las GAN han llamado la atención del gran público por primera vez con el algoritmo pix2pix que permite transformar una imagen. Por ejemplo, se puede pasar de una imagen en blanco y negro a su versión en color, de una imagen abocetada a su versión realista, o de una imagen de día a la misma imagen de noche
+imagen 5
+Para poder aprender esta red, ya debe tener un conjunto de datos de pares de imágenes (por ejemplo, un par corresponde a un boceto dibujado y la imagen correspondiente completa).
+Durante el aprendizaje, el generador toma un boceto como entrada y genera una imagen completa. El discriminador observa el par de imágenes resultante (el boceto y la imagen generada) e intenta determinar si el par proviene del conjunto de datos original o si la imagen fue generada. Las dos redes mejoran a medida que se aprenden y al final obtenemos un generador capaz de transformar cualquier boceto en una imagen. Una de las versiones de este algoritmo que tiene mucho más es Edges2cat que ha sido entrenado en pares de imágenes de gatos.
+Al ingresar un boceto bastante detallado, obtenemos un resultado fotorrealista. Cuando uno es menos talentoso y da un boceto como el de abajo, los resultados son menos convincentes, pero aun así se corresponden bien con lo que se solicita de la red.
+Sorprendentemente, incluso cuando proporciona bocetos que no representan gatos en absoluto, la red se las arregla para salir adelante e intenta generar un gato con la forma solicitada.
+
+imagen 6
+
+Por supuesto, este enfoque se ha utilizado para la generación de campos procedimentales. Como hemos visto anteriormente, la generación de campos de procedimiento a menudo pasa por el ruido de Perlin o sus variantes (como el súper ruido para No man's sky) con resultados bastante desiguales, ya que a menudo se requiere una gran cantidad de ajustes manuales.
+
+imagen 7
+
+Con un método muy cercano a pix2pix, es posible aprender una red capaz de pasar de un boceto muy simple de un terreno a un terreno modelado en 3 dimensiones. Entonces es suficiente trabajar en el boceto para modificar el resultado en 3D, lo que ahorra mucho tiempo.
+
+## CONCLUSIONES
+
+Los enfoques de generación procedural basados ​​en IA y principalmente aquellos con Deep Learning parecen realmente prometedores, pero claramente no resuelven todos los problemas. De hecho, Deep Learning se adapta bien a datos naturales como imágenes, texto o sonido, pero menos a datos con fuertes restricciones estructurales.
+
+Cuando quieres generar el nivel de un juego, este tipo de generación errónea es un problema. De hecho, un nivel muy bonito que no se puede terminar es de poco interés. Los problemas que plantea la generación procedimental de contenidos en los videojuegos son, por tanto, algo diferentes a los de la generación de simples imágenes o texto, por lo que es necesario adaptar los métodos. Sin embargo, el trabajo de investigación sobre DOOM ha demostrado que es posible usar GAN para este tipo de casos de uso.
+Sin ser herramientas 100% fiables, está claro que estos métodos parecen ser capaces de acelerar o facilitar el trabajo de desarrolladores y artistas. Es difícil predecir si los enfoques con Deep Learning reemplazarán los enfoques más tradicionales, pero está claro que aportan nuevas perspectivas e inspiración a los métodos de generación de contenido.
+En cualquier caso, es probable que en el futuro la mayor parte del desarrollo de juegos se automatice y los humanos se encarguen de las tareas más creativas. Para aquellos interesados ​​en ir más allá, este github reúne una gran cantidad de recursos interesantes sobre la generación de procedimientos.
+La Inteligencia Artificial está, claramente, avanzando muy rápido. En el campo de los videojuegos, en concreto, están apareciendo muchos trabajos que, sin estar específicamente pensados para este campo, es una manera muy buena de crear videojuegos. Todo esto es muy interesante, pero existen multitud de campos que no hemos cubierto: creación de nuevas vistas de objetos, generación de modelos 3D a partir de imágenes, animaciones creadas a partir de una sola imagen
+
+## BIBLIOGRAFÍA
+
+editor. (2022, 31 marzo). Inteligencia Artificial para la generación de gráficos en videojuegos. bit. https://bit.coit.es/inteligencia-artificial-para-la-generacion-de-graficos-en-videojuegos/
+
+Demo, G. (s. f.). GauGAN2 by NVIDIA. GPT-3 Demo. https://gpt3demo.com/apps/gaugan2-by-nvidia
+
+OpenAI. (2022, abril 14). Dall·e 2. OpenAI. https://openai.com/dall-e-2/
