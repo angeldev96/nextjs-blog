@@ -1,0 +1,53 @@
+---
+title: 'Investigacion SOII'
+date: 2022-11-16T15:32:14Z
+lastmod: '2021-02-01'
+tags: ['next-js', 'tailwind', 'guide']
+draft: false
+summary: 'An overview of the new features released in v1 - code block copy, multiple authors, frontmatter layout and more'
+layout: PostSimple
+bibliography: references-data.bib
+canonicalUrl: https://tailwind-nextjs-starter-blog.vercel.app/blog/new-features-in-v1/
+---
+
+## Inteligencia Ariticial
+
+La película trata de una patrulla de cuatro hombres del ejército de fuerza especiales de los estados unidos con
+la misión de infiltrarse a un pueblo de afganistán donde el pueblo está rodeado por montañas,donde tendrán que
+infiltrarse con mucho cuidado buscando cobertura y encubrimiento para no ser detectados por el enemigo, son enviados
+por aire haciendo descenso de helicópteros para poder llegar hasta ese lugar, la patrulla está equipada con armas ,
+radios y teléfonos satelitales para poder establecer coneccion y brindar información y recibir apoyo en caso de ser
+necesaria. logran poder establecer visibilidad directamente con ese pueblo donde se encuentra una fuerza armada de
+los talibanes. ya ubicados el equipo decide tomar un descanso para recuperar energías y esperar el momento preciso
+para poder infiltrarse, el equipo es descubierto por una inesperada situación de tres personas del pueblo afgano
+que se dirigen con un rebaño de animales, los soldados se ven forzados a tomar una difícil decisión de qué hacer
+con ellos, si dejarlos atados, dejarlos ir o quitarles la vida, ellos se encuentran en una fuerte discusión
+sabiendo que la decisión que deben tomar debe ser la más correcta por que con una mala decisión puede ser fatal
+para su equipo. el jefe del equipo decide dejarlos ir, sabiendo que ya fueron descubiertos y en cualquier momento
+serán atacados por el enemigo, el equipo decide salir de ese lugar y tratar de establecer comunicación con la base
+de comunicaciones de los estados unidos para ponerlos al tanto de la situación en la que se encontraban, pero
+lastimosamente en el terreno donde estaban no hay señal para radio, deciden comunicarse por teléfono satelital y
+poner al tanto de lo que estaba sucediendo, la comunicación establecida es de muy baja calidad por el terreno
+donde se encuentran y no pudieron brindar la suficiente información de lo que estaba sucediendo.
+
+```bash
+git remote add template git@github.com:timlrx/tailwind-nextjs-starter-blog.git
+git pull template v1 --allow-unrelated-histories
+rm -rf node_modules
+```
+
+You can see an example of such a migration in this [commit](https://github.com/timlrx/timlrx.com/commit/bba1c185384fd6d5cdaac15abf802fdcff027286) for my personal blog.
+
+v1 also uses `feed.xml` rather than `index.xml`, to avoid some build issues with Vercel. If you are migrating you should add a redirect to `next.config.js` like so:
+
+```js
+async redirects() {
+  return [
+    {
+      source: '/:path/index.xml',
+      destination: '/:path/feed.xml',
+      permanent: true,
+    }
+  ]
+}
+```
